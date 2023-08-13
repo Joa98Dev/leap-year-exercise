@@ -1,6 +1,7 @@
 //Leap Year Excercise
 class leapYear {
     public static void main(String[] args) {
+        //Prints the result
         System.out.println(calculateLeapYear(2012));
     }
     
