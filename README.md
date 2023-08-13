@@ -38,7 +38,7 @@ Ok, we already created our fucntion, so then we will create inside it the condit
 So, what did we just do? 🥸
 We declare a condition that will check if the ***year*** is a number that when we divide it between 4 or between 400 its residue must be 0 (That means that is divisible).
 
-Also we add that if the condition is true, then returned as the year + the message "is a leap year"
+Also we add that if the condition is true, then returned us the year + the message "is a leap year"
 
 To make it simple we will use the formatted string, that allow us to include it inside it variables, expressions and results of function calls.
 
@@ -46,11 +46,11 @@ Ok we already did the first part!
 
 Do you remember the parameters to know if a year is leap?
 
-* The year must be at the same time divisible between **4** and **400**.
-* If the year is divisible between **4** but it isn't between **100** then it is a leap year.
+* The year must be at the same time divisible between **4** and **400**. ✅
+* If the year is divisible between **4** but it isn't between **100** then it is a leap year. (This mean that the residue of the division between **100** must not be **0**)
 * Also if the year is divisible between **100** and **400** then it's a leap year.
 
-So, now we just have to repeat the first conditional logic and adapt each condition depending of the parameter that must do:
+So, now we just have to repeat the first conditional logic and adapt each condition depending of the parameter:
 
 ~~~
 def leap_year(year):
@@ -73,3 +73,92 @@ So, when we add a year the program will check if the number meets the requiremnt
 
 But...
 What would happen if the year added doesn't meet any of the requirements above? 😯
+
+In this case we add `else`.
+
+So if the year typed does not meet any of the requirements it means that is not a year leap.
+
+~~~
+def leap_year(year):
+
+    if year % 4 == 0 and year % 400 == 0:
+        return f'{year} is a leap year'
+    
+    elif year % 4 == 0 and year % 100 != 0:
+        return f'{year} is a leap year'
+    
+    elif year % 100 == 0 and year % 400 == 0:
+        return f'{year} is a leap year'
+    
+    else:
+        return f'{year} is not a leap year'
+~~~
+
+Nice!
+
+Now the only thing left is to type the year that we want to see if it's a leap and print the results.
+
+~~~
+    print(leap_year(2010))
+~~~
+We print the function and add it a value, the value is the variable year.
+
+Voilà!
+
+It's done!
+
+In this example the output would be:
+~~~
+    2010 is not a leap year
+~~~
+
+Because 2010 is not divisible between 100, so it does not meet one of the conditional requirements.
+
+The full code will be:
+
+~~~
+def leap_year(year):
+
+    if year % 4 == 0 and year % 400 == 0:
+        return f'{year} is a leap year'
+    
+    elif year % 4 == 0 and year % 100 != 0:
+        return f'{year} is a leap year'
+    
+    elif year % 100 == 0 and year % 400 == 0:
+        return f'{year} is a leap year'
+    
+    else:
+        return f'{year} is not a leap year'
+    
+
+print(leap_year(2010))
+
+Output: 2010 is not a leap year 
+~~~
+
+if you add a number that meet all the conditonals it would be like this:
+
+~~~
+def leap_year(year):
+
+    if year % 4 == 0 and year % 400 == 0:
+        return f'{year} is a leap year'
+    
+    elif year % 4 == 0 and year % 100 != 0:
+        return f'{year} is a leap year'
+    
+    elif year % 100 == 0 and year % 400 == 0:
+        return f'{year} is a leap year'
+    
+    else:
+        return f'{year} is not a leap year'
+    
+
+print(leap_year(2020))
+
+Output: 2020 is a leap year 
+~~~
+
+> In this repostory you can find this same exercise with some minor changes. This repository contains two version of the same exercise, a Java version and a Python version. 
+*Exercise made by: Joa98*.

@@ -2,7 +2,7 @@
 class leapYear {
     public static void main(String[] args) {
         //Prints the result
-        System.out.println(calculateLeapYear(2012));
+        System.out.println(calculateLeapYear(2020));
     }
     
     //This function checks if the variable year store a leap year or not
