@@ -3,7 +3,7 @@ This is a common programming exercise in which we have to make a small program t
 
 This exercise challenge our logicaL skills and make us to "translate" that logical problem into coding.
 
-## How does it works? 🥸
+## How does it work? 🥸
 A leap year is a year that has an extra day in it, so unlike a normal year that has 365 days, a leap year has 366 days.
 
 To calculate which year is or not a leap one, we have to follow these parameters:
